@@ -15,7 +15,7 @@ namespace FileRemane
     public partial class Form1 : Form
     {
         public List<string> fileList = new List<string>();
-        public string prefix = "DSC_0";
+        public string prefix = "DSC_";
         public string sub = ".JPG";
         public Form1()
         {
@@ -68,7 +68,7 @@ namespace FileRemane
             foreach (string index in fileList)
             {
                 File.Move(txtPath.Text + "\\" + index,
-                    txtOutput.Text + "\\" + prefix + start_number.ToString("000") + sub);
+                    txtOutput.Text + "\\" + prefix + start_number.ToString("0000") + sub);
                 start_number++;
 
             }
